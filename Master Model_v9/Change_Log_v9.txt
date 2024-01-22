@@ -30,3 +30,8 @@ suggests that the contributing area will only occasionally exceed the total land
 store will not be emptied at every storm.  Also this avoids the need for the surface soil 
 depth parpameter that was in model V8.  It seems better since it is based on actual physical lu 
 areas and no additional parameters are required
+
+2024-01-22 Don
+I now fixed two equations that caused a divide by zero error when the wetland lu was 0 
+See the excel sheet for more detail. The two equations were for the variables C loss Wetland Soils
+and Areal Yearly Mean Total Wetland C
