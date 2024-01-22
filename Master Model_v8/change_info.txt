@@ -1,0 +1,45 @@
+2023-10-02 
+Inital upload New version on model is working.  However, there is almost a 10x difference in the concentrations 
+simulated by the newversion (DOC 2) model and the original model developed by Pam Naden in CLIME
+
+2023-10-03
+Added a view for calculation of Annual means
+
+2023-10-08
+Changed the calculation of deep perc in DOC model 2 to be similar to that in the hydrology model
+Restored the Deep Perc calculation in the hydrology model back to the original version that accounts
+for Today inpus as well as the level on day -1
+
+2023-10-12
+Added calculations of concentrations and also a new view to calculate annual mean values
+Fixed the caluclations of perc in the hydrology and of C loss Deep Perc in the new DOC model
+
+2023-10-22
+Now fixed the calculation of deep percolation so that it is now possible to leave a minimal
+amount of water in the sat zone even when there is a large demand from the deep sat zone. 
+This makes it possible to calculate concentrations of C in the Sat Zone without really large
+values.  Added some more variables to the annual mean view.  Fixed default viewing graphs to
+show year and not elapsed day on the X axis.
+
+2023-10-15 
+Changed the variables in the optimization and error calculation views to read in DOC 
+concentration data from DOC model 2 instead of DOC model 1
+
+2023-12-27
+Several changes to the model to improve the simulation of DOC concentrations.  In previous
+version it was impossible to reduce the simulated variability in DOC to match that of the
+measured data.  This version seems to improved this Three changes were made
+	1) The two loss rates (Fast GW and Deep Perc) from the saturated zone are now linked 
+           to one common loss function.  Increase in one loss will result in a decrease in 
+	       the loss from the other
+	2) C Loss Fast GW now related to discharge by a power function.  This allows loss to
+           rise rapidly with discharge and buffer the stream concentration.
+	3) C Loss Slow GW now also based on power function.
+Also removed some redundant variable from the model and improved the custom DOC graph set to include
+plot of the two power loss functions described above.  Now separate graph sets for hydrology and DOC 
+models
+
+2024-01-03
+Small change to the calculation of total decomposition.  This was calculated by multiplying by
+total watershed area, now it is calculated by multiplying by the area of DOC producing land
+uses.

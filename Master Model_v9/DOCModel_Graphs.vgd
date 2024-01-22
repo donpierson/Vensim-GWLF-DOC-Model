@@ -1,0 +1,234 @@
+:GRAPH Model_C_balance
+:TITLE Watershed Carbon Balance CLIME and Model 2
+:X-AXIS Base Calendar Year
+:X-LABEL Year
+:X-DIV 5
+:SCALE
+:VAR Carbon Balance 1
+:DATASET *1
+:VAR Carbon Balance 2
+:DATASET *1
+
+:GRAPH Model_Decompostion
+:TITLE Carbon Decompostion Modeld 1and  2
+:X-AXIS Base Calendar Year
+:X-LABEL Year
+:X-DIV 5
+:SCALE
+:VAR peat decomp kg
+:DATASET *1
+:VAR Total Decomp
+:DATASET *1
+
+:GRAPH Yearly_Mean_Air_Temp_vs_Decomp
+:TITLE Mean Annual Air Temp vs Total Annual  Decomp
+:X-AXIS Yearly Mean Air Temp
+:X-LABEL Mean Annual Air Temp
+:DOTS
+:SCALE
+:VAR Yearly Mean Total Decomp|Mean Annual Decomposition
+:Y-MIN 7000
+:Y-MAX 15000
+:DATASET *1
+
+:GRAPH Soil_Temp_vs_Decomp_AnnualScatter
+:TITLE Soil Temperature vs Peat Decompositon
+:X-AXIS Yearly Mean Soil Temp
+:X-LABEL Soil Temperature
+:DOTS
+:SCALE
+:VAR Yearly Mean Total Decomp|Peat Decomposition
+:Y-MAX 13500
+:DATASET *1
+
+:GRAPH Soil_Temp_vs_Decomp_Annual_TimeSeries
+:TITLE Soil Temperature vs Peat Decompositon
+:X-AXIS Base Calendar Year
+:SCALE
+:VAR Yearly Mean Total Decomp|Peat Decomposition
+:Y-MAX 13500
+:DATASET *1
+:SCALE
+:VAR Yearly Mean Soil Temp|Soil Temperature
+:DATASET *1
+
+:GRAPH Soil_Temp_vs_Decomp_DailyScatter
+:TITLE Soil Temperature vs Peat Decompositon
+:X-AXIS soil temp
+:X-LABEL Soil Temperature
+:DOTS
+:SCALE
+:VAR peat decomp|Peat Decomposition
+:DATASET *1
+
+:GRAPH Decomp_StreamDOC_AnnualScatter_Model_1
+:TITLE Mean Annual Decom vs Mean Annual DOC Model 1
+:X-AXIS Yearly Mean Total Decomp
+:X-LABEL Peat Decomposition
+:DOTS
+:SCALE
+:VAR Yearly Mean DOC Conc 1|DOC  conc model 1
+:DATASET *1
+
+:GRAPH Decomp_StreamDOC_TimeSeriesr_Model_1
+:TITLE Yearly Mean Decomposition and StreamDOC Model 1
+:X-AXIS Base Calendar Year
+:SCALE
+:VAR Yearly Mean DOC Conc 1|DOC  conc model 1
+:DATASET *1
+:SCALE
+:VAR Yearly Mean Total Decomp|Peat Decomposition
+:DATASET *1
+
+:GRAPH SIM_MEAS_DOC_Model_1
+:TITLE Simulated and Measured DOC CLIME Model
+:X-AXIS Base Calendar Year
+:X-LABEL Year
+:DOTS
+:SCALE
+:VAR Meas DOC|Measured DOC
+:DATASET *1
+:VAR DOC conc in streamflow 1|Simulated DOC
+:DATASET *1
+
+:GRAPH SIM_MEAS_DOC_Scatter_Model_1
+:TITLE Measured vs Simulated DOC CLIME Model
+:X-AXIS Meas DOC
+:X-LABEL Measured DOC
+:X-MIN 5
+:X-MAX 14
+:WIDTH 15
+:HEIGHT 15
+:DOTS
+:SCALE
+:VAR DOC conc in streamflow 1|Simulated DOC
+:Y-MIN 5
+:Y-MAX 14
+:DATASET *1
+
+:GRAPH Decomp_StreamDOC_AnnualScatter_Model2
+:TITLE Mean Annual Decom vs Mean Annual DOC Model 2
+:X-AXIS Yearly Mean Total Decomp
+:X-LABEL Peat Decomposition
+:DOTS
+:SCALE
+:VAR Yearly Mean DOC Conc 2|DOC  conc model 2
+:DATASET *1
+
+:GRAPH Decomp_StreamDOC_TimeSeriesr_Mode2
+:TITLE Yearly Mean Decomposition and StreamDOC Model 2
+:X-AXIS Base Calendar Year
+:SCALE
+:VAR Yearly Mean DOC Conc 2|DOC  conc model 2
+:DATASET *1
+:SCALE
+:VAR Yearly Mean Total Decomp|Peat Decomposition
+:DATASET *1
+
+:GRAPH SIM_MEAS_DOC_Model2
+:TITLE Simulated and Measured DOC Model 2
+:X-AXIS Base Calendar Year
+:X-LABEL Year
+:DOTS
+:SCALE
+:VAR Meas DOC|Measured DOC
+:Y-MAX 50
+:DATASET *1
+:VAR DOC conc in streamflow 2|simulated DOC
+:Y-MAX 50
+:DATASET *1
+
+:GRAPH SIM_MEAS_DOC_Scatter_Model_2
+:TITLE Measured vs Simulated DOC  Model 2
+:X-AXIS Meas DOC
+:X-LABEL Measured DOC
+:X-MIN 0
+:X-MAX 50
+:WIDTH 15
+:HEIGHT 15
+:DOTS
+:SCALE
+:VAR DOC conc in streamflow 2|Simulated DOC
+:Y-MIN 0
+:Y-MAX 50
+:DATASET *1
+
+:GRAPH SIM_MEAS_DOC_Daily_Loads_Model2
+:TITLE DOC Daily Loads
+:X-AXIS Base Calendar Year
+:SCALE
+:VAR DOC load daily meas interpolated
+:DATASET *1
+:VAR DOC load daily sim
+:DATASET *1
+
+:GRAPH SIM_MEAS_DOC_vs_Discharge-Model2
+:TITLE Measured vs Simulated DOC  Model 2
+:X-AXIS streamflow
+:X-LABEL Simulated Discharge (cm/d)
+:WIDTH 15
+:HEIGHT 15
+:DOTS
+:SCALE
+:VAR DOC conc in streamflow 2|Simulated DOC
+:DATASET *1
+:VAR Meas DOC
+:DATASET 
+
+:GRAPH MEAS_DOC_vs_Discharge
+:TITLE Measured vs Simulated DOC  Model 2
+:X-AXIS streamflow
+:X-LABEL Simulated Discharge (cm/d)
+:WIDTH 15
+:HEIGHT 15
+:DOTS
+:SCALE
+:VAR Meas DOC|Meas DOC
+:UNITS g/m3
+:DATASET *1
+
+:GRAPH Sat_Zone_Q_loss_relationship
+:TITLE Relationship  Fast GW and Sat Zone C loss
+:X-AXIS gwflow
+:X-LABEL Fast GW Flow  (cm/d)
+:WIDTH 15
+:HEIGHT 15
+:DOTS
+:SCALE
+:VAR C loss fast GW|C Loss Fast GS
+:UNITS kg/d
+:DATASET *1
+
+:GRAPH Deep_Sat_Zone_Q_loss_relationship
+:TITLE Relationship  Slow GW and Deep Sat Zone C loss
+:X-AXIS Slow gwflow
+:X-LABEL Fast GW Flow  (cm/d)
+:WIDTH 15
+:HEIGHT 15
+:DOTS
+:SCALE
+:VAR C loss Slow GW Flow|C Loss Fast GS
+:UNITS kg/d
+:DATASET *1
+
+:GRAPH DeepSat_Zone_loss_function
+:TITLE Relationship  Slow GW and Sat Zone C loss coeff
+:X-AXIS Slow gwflow
+:X-LABEL Fast GW Flow  (cm/d)
+:WIDTH 15
+:HEIGHT 15
+:DOTS
+:SCALE
+:VAR C loss slow GW Recess coeff|C Loss Fast GS
+:DATASET *1
+
+:GRAPH Sat_Zone_loss_function
+:TITLE Relationship  Fast GW and Sat Zone C loss coeff
+:X-AXIS gwflow
+:X-LABEL Fast GW Flow  (cm/d)
+:WIDTH 15
+:HEIGHT 15
+:DOTS
+:SCALE
+:VAR C loss fast GW Recess coeff|C Loss Fast GS
+:DATASET *1

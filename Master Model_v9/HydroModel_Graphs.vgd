@@ -1,0 +1,175 @@
+:GRAPH SIM_MEAS_Q_Daily
+:TITLE Simulated and Measured Streamflow
+:X-AXIS Base Calendar Year
+:X-LABEL Year
+:SCALE
+:VAR meas streamflow|Measured Streamflow
+:Y-MAX 0.75
+:DATASET *1
+:VAR streamflow|Simulated Streamflow
+:DATASET *1
+
+:GRAPH SIM_MEAS_Q_Monthly
+:TITLE Simulated and Measured Streamflow
+:X-AXIS Base Calendar Year
+:X-LABEL Year
+:SCALE
+:VAR Mo Cum Qm|Measured Streamflow
+:DATASET *1
+:VAR Mo Cum Qs|Simulated Streamflow
+:DATASET *1
+
+:GRAPH SIM_MEAS_Q_Yearly
+:TITLE Simulated and Measured Streamflow
+:X-AXIS Base Calendar Year
+:X-LABEL Year
+:SCALE
+:VAR Yearly Cum Qm|Measured Streamflow
+:DATASET *1
+:VAR Yearly Cum Qs|Simulated Streamflow
+:DATASET *1
+
+:GRAPH SIM_MEAS_Q_scatter_Daily
+:TITLE Simulated Streamflow vs Measured Streamflow
+:X-AXIS meas streamflow
+:X-LABEL Measured Streamflow
+:X-MIN 0
+:X-MAX 0.7
+:WIDTH 5
+:HEIGHT 5
+:DOTS
+:SCALE
+:VAR streamflow|Simulated Streamflow
+:Y-MIN 0
+:Y-MAX 0.7
+:DATASET *1
+
+:GRAPH SIM_MEAS_Q_scatter_Monthly
+:TITLE Simulated Streamflow vs Measured Streamflow
+:X-AXIS Mo Cum Qm
+:X-LABEL Measured Streamflow
+:X-MIN 0
+:X-MAX 20
+:WIDTH 8
+:HEIGHT 8
+:DOTS
+:SCALE
+:VAR Mo Cum Qs|Simulated Streamflow
+:Y-MIN 0
+:Y-MAX 20
+:DATASET *1
+
+:GRAPH SIM_MEAS_Q_scatter_Yearly
+:TITLE Simulated Streamflow vs Measured Streamflow
+:X-AXIS Yearly Cum Qm
+:X-LABEL Measured Streamflow
+:X-MIN 0
+:X-MAX 100
+:WIDTH 8
+:HEIGHT 8
+:DOTS
+:SCALE
+:VAR Yearly Cum Qs|Simulated Streamflow
+:Y-MIN 0
+:Y-MAX 100
+:DATASET *1
+
+:GRAPH SIM_MEAS_Water_Temp
+:TITLE Simulated and Measured Water Temperature
+:X-AXIS Base Calendar Year
+:X-LABEL Year
+:SCALE
+:VAR Measured Water Temperature|Measured Water Temperature
+:DATASET *1
+:VAR Simulated Water Temperature|Simulated Water Temperature
+:DATASET *1
+
+:GRAPH SIM_MEAS_WaterTemp_scatter
+:TITLE Simulated vs Measured Water temperature
+:X-AXIS Measured Water Temperature
+:X-LABEL Measured Water Temperature
+:X-MIN 0
+:X-MAX 30
+:WIDTH 5
+:HEIGHT 5
+:DOTS
+:SCALE
+:VAR Simulated Water Temperature|Simulated Water Temperature
+:Y-MIN 0
+:Y-MAX 30
+:DATASET *1
+
+:GRAPH Sim_GW_Flow_vs_Meas_BaseFlow
+:TITLE Sim Groundwater vs Meas Baseflow
+:SCALE
+:VAR Meas Baseflow|Measured Base Flow
+:Y-MAX 1
+:DATASET *1
+:VAR gwflow|Ground Water Flow
+:Y-MAX 1
+:DATASET *1
+
+:GRAPH Sim__Meas_GW_flow_Scatter
+:TITLE Simulated Channel Discharge vs Measured Streamflow
+:X-AXIS Meas Baseflow
+:X-LABEL Measured Baseflow
+:X-MIN 0
+:X-MAX 0.7
+:WIDTH 5
+:HEIGHT 5
+:DOTS
+:SCALE
+:VAR gwflow|Simulated Ground Water Flow
+:Y-MIN 0
+:Y-MAX 0.7
+:DATASET *1
+
+:GRAPH StreamFlowCRM
+:TITLE StreamFlow CRM at Monthly and Yearly Time Scales
+:WIDTH 10
+:HEIGHT 4
+:SCALE
+:VAR Yearly Streamflow CRM|Measured Base Flow
+:DATASET *1
+:SCALE
+:VAR Monthly Streamflow CRM|Ground Water Flow
+:DATASET *1
+
+:GRAPH GWFlowCRM
+:TITLE Groundwater Flow CRM at Monthly and Yearly Time Scales
+:WIDTH 10
+:HEIGHT 4
+:SCALE
+:VAR Yearly gwflow CRM|Yearky CRM
+:DATASET *1
+:SCALE
+:VAR Monthly gwflow CRM|Monthly CRM
+:DATASET *1
+
+:GRAPH Runoff_CRM
+:TITLE SurfaceRunoff CRM at Monthly and Yearly Time Scales
+:WIDTH 10
+:HEIGHT 4
+:SCALE
+:VAR Yearly runoff CRM|Yearky CRM
+:DATASET *1
+:SCALE
+:VAR Monthly runoff CRM|Monthly CRM
+:DATASET *1
+
+:GRAPH Evapotranspirations
+:TITLE Evapotranspirations
+:X-AXIS Base Calendar Year
+:SCALE
+:VAR potential evapotrans
+:Y-MIN 0
+:Y-MAX 0.8
+:DATASET *1
+:VAR PT Evapotranspiration
+:Y-MIN 0
+:Y-MAX 0.8
+:DATASET *1
+:VAR PM Evapotranspiration
+:Y-MIN 0
+:Y-MAX 0.8
+:DATASET *1

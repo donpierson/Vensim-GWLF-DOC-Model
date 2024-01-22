@@ -1,0 +1,32 @@
+                        Change Log Ven_GWLFHydro_DOC_v9.mdl
+
+Now have added two new lu subgroups
+   lu DOC dryland - these are the lu categories that could be expected to mainly contribute
+				    DOC by sub surface pathways.  mainly forest and grassland s
+					
+   lu DOc wetland - these are the lu categories that are wet standing or saturated soils
+			         wetland bogs and marsh.  It is expected that these are not contributing
+					 to sub surface DOC, but are contributing through direct runoff and runoff
+					 delayed as channel flow.  Decomposition into wetlands is only temperature
+					 dependent and is greater that in the dryland soils.
+					 
+I have eliminated using the ratio of surface soil storage to total water column storage since
+The SWC can be quite different from catchment to catchment.  For dry lands there is now just a 
+fixed ratio between DOC loss from surface and subsurface processes that can be calibrated
+
+The annual loss of DOC g m2 y-1 is now calculated for both the wetland and dryland lu 
+categories.  Dryland is presently at about 3-4 g m2 y-1 based on the lase v8 calibration the wetland
+is now set at about 20-30 g m2 y-1 based on the map from the AGU presentation.
+
+  I cannot think of a way to avoid this.  I considered using the
+ratio of runoff/max runoff, but then the C store will never be drawn down to 0.  However the 
+effects of previous storms should prevail since they will draw down the store and what remains 
+will be drawn down next time.
+
+Loss of DOC from surface runoff is still dependent on a presumed storage of DOC in either the 
+upper soil layer or the wetland. The loss of stored surface DOC is based on the potential 
+contributing area which is defined by the ratio of runoff volume/rain melt depth. Quick check 
+suggests that the contributing area will only occasionally exceed the total land area so the 
+store will not be emptied at every storm.  Also this avoids the need for the surface soil 
+depth parpameter that was in model V8.  It seems better since it is based on actual physical lu 
+areas and no additional parameters are required
