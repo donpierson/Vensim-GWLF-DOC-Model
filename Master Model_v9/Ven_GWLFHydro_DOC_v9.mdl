@@ -6,6 +6,15 @@ LEAPTEST=IF THEN ELSE
 	~		|
 
 :END OF MACRO:
+Avaiable C Deep Sat Zone gm2=
+	(Available C Deep Sat Zone/Watershed Area)/1000
+	~	gC/m2
+	~	This is the carbon storage converted from total Kg to the g/m2 so that it is \
+		possible to compare the relative storage levels on watersheds with \
+		different areas
+		(kg*1000) / (km2*1,000,000) results in a correction of 1/1000
+	|
+
 conc C Sat Zone=
 	ZIDZ(Available C Sat Zone,Sat Zone Storage m3)*1000
 	~	g/m3
@@ -32,15 +41,6 @@ Available C Sat Zone gm2=
 
 Available C UnSat Zone gm2=
 	(Available C Unsat Zone 2/Watershed Area)/1000
-	~	gC/m2
-	~	This is the carbon storage converted from total Kg to the g/m2 so that it is \
-		possible to compare the relative storage levels on watersheds with \
-		different areas
-		(kg*1000) / (km2*1,000,000) results in a correction of 1/1000
-	|
-
-Avaiable C Deep Sat Zone gm2=
-	(conc C Deep Sat Zone/Watershed Area)/1000
 	~	gC/m2
 	~	This is the carbon storage converted from total Kg to the g/m2 so that it is \
 		possible to compare the relative storage levels on watersheds with \
@@ -3979,7 +3979,7 @@ $-1--1--1,0,|12||-1--1--1|-1--1--1|-1--1--1|-1--1--1|-1--1--1|96,96,66,0
 1,178,29,60,1,0,0,2,0,192,0,-1--1--1,,1|(977,1025)|
 10,179,C recharge,827,744,49,22,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
 1,180,179,18,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
-10,181,conc C Deep Sat Zone,2040,1147,63,24,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|||128-128-128,0,0,0,0,0,0
+10,181,conc C Deep Sat Zone,2075,1208,63,24,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|||128-128-128,0,0,0,0,0,0
 10,182,Available C Surface Soils,1905,438,64,24,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|||128-128-128,0,0,0,0,0,0
 1,183,182,158,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
 10,184,Deep GW Cap m3,1120,1260,37,18,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
@@ -4080,10 +4080,11 @@ $-1--1--1,0,|12||-1--1--1|-1--1--1|-1--1--1|-1--1--1|-1--1--1|96,96,66,0
 10,279,Watershed Area,2527,651,54,24,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|||128-128-128,0,0,0,0,0,0
 1,280,168,276,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
 1,281,160,277,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
-1,282,181,278,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
-1,283,279,276,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
-1,284,279,277,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
-1,285,279,278,1,0,0,0,0,192,0,-1--1--1,,1|(2438,900)|
+1,282,279,276,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
+1,283,279,277,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
+1,284,279,278,1,0,0,0,0,192,0,-1--1--1,,1|(2438,900)|
+10,285,Available C Deep Sat Zone,2065,1144,72,24,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|||128-128-128,0,0,0,0,0,0
+1,286,285,278,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
 \\\---/// Sketch information - do not modify anything except names
 V300  Do not put anything below this section - it will be ignored
 *Water Temperature
