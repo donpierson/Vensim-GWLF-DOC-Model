@@ -39,3 +39,6 @@ and Areal Yearly Mean Total Wetland C
 2024-01-31 Don
 Clean up and DOC model 2 diagram a bit (still more to do) by removing unused variables and 
 I also calculated the Unsat Sat and Deep Sat C storage normalized to area (g/m2)
+
+2024-02-09 Don
+Improved some comments added a few new variables to server as payoff in DOC calibrations
