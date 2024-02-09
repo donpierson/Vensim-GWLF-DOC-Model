@@ -42,3 +42,12 @@ I also calculated the Unsat Sat and Deep Sat C storage normalized to area (g/m2)
 
 2024-02-09 Don
 Improved some comments added a few new variables to server as payoff in DOC calibrations
+
+2024-02-09 Ricardo
+1.On the Optimizing view - Point Meas DOC variable was added, this is equal to Meas DOC but gets rid of "0" measurements of DOC in case they are in the input DOC dataset
+2.On the DOC 2 view - C loss surface corr was added. This correction factor has influence on both C loss Wetland Soils and C loss Surface Soils
+3.On the DOC 2 view - Total C loss Surface Runoff equation was modified, from: C loss Surface Soils+C loss Wetland Soils, to: (C loss Surface Soils+C loss Wetland Soils)*MIN(runoff lu DOC, SAT CAP)
+4 On the DOC 2 view - DOC Channel Coeff was added. This to have an independent coefficient regulatin the C loss Channel flow.
+
+
+
