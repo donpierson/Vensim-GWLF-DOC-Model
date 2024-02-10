@@ -1,15 +1,10 @@
-1:test.vdfx
-1:Opt_Step1.vdfx
-1:baseline.vdfx
-4:Time
-5:DOC conc in streamflow 2
+5:"Absolute sim - meas"
 6:Continuous urban
 6:D1
 6:Dormant
 6:T1
-9:test
+9:current
 19:66,2
-21:Optimize dry land decomp so that there is a long-term mass balance of DOC
-24:21551
-25:44562
-26:44562
+24:0
+25:0
+26:0
