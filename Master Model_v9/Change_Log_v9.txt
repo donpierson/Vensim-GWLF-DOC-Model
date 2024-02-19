@@ -18,7 +18,7 @@ The annual loss of DOC g m2 y-1 is now calculated for both the wetland and dryla
 categories.  Dryland is presently at about 3-4 g m2 y-1 based on the lase v8 calibration the wetland
 is now set at about 20-30 g m2 y-1 based on the map from the AGU presentation.
 
-  I cannot think of a way to avoid this.  I considered using the
+I cannot think of a way to avoid this.  I considered using the
 ratio of runoff/max runoff, but then the C store will never be drawn down to 0.  However the 
 effects of previous storms should prevail since they will draw down the store and what remains 
 will be drawn down next time.
@@ -48,6 +48,12 @@ Improved some comments added a few new variables to server as payoff in DOC cali
 2.On the DOC 2 view - C loss surface corr was added. This correction factor has influence on both C loss Wetland Soils and C loss Surface Soils
 3.On the DOC 2 view - Total C loss Surface Runoff equation was modified, from: C loss Surface Soils+C loss Wetland Soils, to: (C loss Surface Soils+C loss Wetland Soils)*MIN(runoff lu DOC, SAT CAP)
 4 On the DOC 2 view - DOC Channel Coeff was added. This to have an independent coefficient regulatin the C loss Channel flow.
+
+2024-02-19 Don
+I made a small change to the hydrology model so like the sat zone the deep sat zone always
+retains a minimal amount of water (presently 1cm).  This was done to prevent unrealistic concentration 
+spikes in DOC concentration.  Also some additional variables added to the calibration view.
+
 
 
 
