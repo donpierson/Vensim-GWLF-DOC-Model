@@ -54,6 +54,8 @@ I made a small change to the hydrology model so like the sat zone the deep sat z
 retains a minimal amount of water (presently 1cm).  This was done to prevent unrealistic concentration 
 spikes in DOC concentration.  Also some additional variables added to the calibration view.
 
-
+2024-02-23 Don
+Improved the organization and commenting of DOC variables on the optimization view.  Added 
+agricultural land use to DOC lu and also to Dryland DOC lu
 
 
