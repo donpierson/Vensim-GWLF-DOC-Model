@@ -70,12 +70,29 @@ Fixed error in calculation of wetland and dryland runoff (from slack below)
 	Where what I now believe the correct equation should be	
 	
 		SUM(runoff lu[lu DOC dryland!]*AREA LU[lu DOC dryland!])/ SUM ( AREA LU[lu DOC dryland!] )*Area DOC dryland Soils*10000
+		
+		
 	
 	The difference is that in the second equation the runoff from each landuse (cm) is not just summed but a area weighted mean 
 	value is calculated.  Then the final part of the equation (*Area DOC dryland Soils*10000) converts cm/day 
 	to m3/day.  It is also confusing with the units since AREA LU is in ha, but Area DOC dryland Soils is 
 	converted to km2 
 	
-Also made the wetland and dryland contribution areas explicit variable to allow better visualization.
-Added the possibility of basing the proportion of avaialable DOC lost from dryland surface runoff based
+Also made the wetland and dryland contributing areas explicit variabled to allow better visualization.
+Added the possibility of basing the proportion of available DOC lost from dryland surface runoff based
 on loss ratios from the hydrologic model.
+
+2024-03-24 Don
+Some additions calculations of the optimization view.  Some cleaning and rearranging but core model should not have
+Changed
+
+2024-03-27 Don
+Change was made to the the calculations of fast and slow gw flow.  There was an error related
+to the addtion of a min storage value.  Flow was set to 0 when the zone level was less that the
+minimal storage, and normally calculated otherwise.  This meand that fast gw is the storage * the
+recession coeff.  This is wrong at small storage levels since the flow would be based on the total
+storage in the zone and results in a larger than expected spike flow.  The correct equation should
+be (storage-minimal storage) * the recession coeff  This remove only the excess water from the 
+zone storage.
+
+Also added calculation of Avaliable C in surface dryland and wetland soils in g/m2 
