@@ -96,3 +96,13 @@ be (storage-minimal storage) * the recession coeff  This remove only the excess 
 zone storage.
 
 Also added calculation of Avaliable C in surface dryland and wetland soils in g/m2 
+
+2024-03-30
+Added a few new optimisation variables to the hydrologic model that will allow the sat zone 
+initial water levels to be set to the max (Unsat and deep sat) or mean (sat) level of the 
+simulation step
+
+2024-04-04
+changed the calculation of Available C Surface dryland soils gm2 and Available C Surface wetland soils gm2
+to use ZIDZ to avoid crash when one of these land uses (usally wetlands) are zero.  Similarly also Cahanged
+to ZIDZ in the calculation of runoff DOC wetland Soils m3 and runoff DOC dryland Soils m3.  
