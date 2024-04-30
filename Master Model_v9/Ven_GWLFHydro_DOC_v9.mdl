@@ -508,7 +508,7 @@ Ratio dryland runoff gwflow=
 
 runoff DOC wetland Soils m3=
 	ZIDZ(SUM(runoff lu[lu DOC wetland!]*AREA LU[lu DOC wetland!]), SUM (AREA LU[lu DOC wetland\
-		!])*Area DOC wetland Soils*10000)
+		!]))*Area DOC wetland Soils*10000
 	~	m3/day
 	~	Runoff occuring from DOC producing wetland soils.  This is calculated as an area \
 		weighted mean since the runoff from the hydrologic model is in cm and it \
@@ -579,7 +579,7 @@ C loss Wetland Soils=
 
 runoff DOC dryland Soils m3=
 	ZIDZ(SUM(runoff lu[lu DOC dryland!]*AREA LU[lu DOC dryland!]), SUM ( AREA LU[lu DOC dryland\
-		!] )*Area DOC dryland Soils*10000)
+		!] ))*Area DOC dryland Soils*10000
 	~	m3/day
 	~	Runoff occuring from DOC producing soils.  This is calculated as an area weighted \
 		mean since the runoff from the hydrologic model is in cm and it is \
