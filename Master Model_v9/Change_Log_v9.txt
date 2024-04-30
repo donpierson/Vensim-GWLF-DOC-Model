@@ -106,3 +106,16 @@ simulation step
 changed the calculation of Available C Surface dryland soils gm2 and Available C Surface wetland soils gm2
 to use ZIDZ to avoid crash when one of these land uses (usally wetlands) are zero.  Similarly also Cahanged
 to ZIDZ in the calculation of runoff DOC wetland Soils m3 and runoff DOC dryland Soils m3.  
+
+2024-04-30
+Fixed a bug in the calculation of surface runoff using ZIDZ as described above
+
+The model equations was
+runoff DOC wetland Soils m3 =
+ZIDZ(SUM(runoff lu[lu DOC wetland!]*AREA LU[lu DOC wetland!]), SUM (AREA LU[lu DOC wetland!])*Area DOC wetland Soils*10000)
+
+Where is should be
+ZIDZ(SUM(runoff lu[lu DOC wetland!]*AREA LU[lu DOC wetland!]), SUM (AREA LU[lu DOC wetland!]))*Area DOC wetland Soils*10000
+
+Look at the last ) on the right.  This was misplaced and caused the calculated runoff to be much too low.
+  
