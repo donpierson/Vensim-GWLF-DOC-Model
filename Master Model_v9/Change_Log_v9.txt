@@ -104,7 +104,7 @@ simulation step
 
 2024-04-04
 changed the calculation of Available C Surface dryland soils gm2 and Available C Surface wetland soils gm2
-to use ZIDZ to avoid crash when one of these land uses (usally wetlands) are zero.  Similarly also Cahanged
+to use ZIDZ to avoid crash when one of these land uses (usually wetlands) are zero.  Similarly also Changed
 to ZIDZ in the calculation of runoff DOC wetland Soils m3 and runoff DOC dryland Soils m3.  
 
 2024-04-30
@@ -119,3 +119,9 @@ ZIDZ(SUM(runoff lu[lu DOC wetland!]*AREA LU[lu DOC wetland!]), SUM (AREA LU[lu D
 
 Look at the last ) on the right.  This was misplaced and caused the calculated runoff to be much too low.
   
+2024-05-18
+Changed the scaling of DOC surface runoff from wetland and dryland areas to be based on the ratio of the event 
+runoff to the max measured runoff.  Also added a section in the model that calculated the max runoff based on
+a long-term calibration hydrologic model simulation. Fixed some errors related to dividing by 0 when there was
+zero wetland LU.  Removed some old equations regarding the earlier formulation of surface DOC loss that were in 
+the text view but not in the sketch view
