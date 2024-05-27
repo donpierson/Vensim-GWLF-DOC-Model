@@ -125,3 +125,11 @@ runoff to the max measured runoff.  Also added a section in the model that calcu
 a long-term calibration hydrologic model simulation. Fixed some errors related to dividing by 0 when there was
 zero wetland LU.  Removed some old equations regarding the earlier formulation of surface DOC loss that were in 
 the text view but not in the sketch view
+
+2024-05-26
+When testing the above model with opt method 4 I discovered that some variables that I had added to some versions
+of the model were no longer there, probably since I had not yet committed them to GIT so I added them back these were 
+the conc of DOC in slow and fast Gw and the min measured interp DOC concentration.  I also added an addtional optimization
+function that should be useful for adjusting the initial conditions of the sat zone to avoid a long spinup
+
+
