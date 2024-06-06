@@ -129,15 +129,17 @@ the text view but not in the sketch view
 2024-05-26
 When testing the above model with opt method 4 I discovered that some variables that I had added to some versions
 of the model were no longer there, probably since I had not yet committed them to GIT so I added them back these were 
-the conc of DOC in slow and fast Gw and the min measured interp DOC concentration.  I also added an addtional optimization
+the conc of DOC in slow and fast Gw and the min measured interp DOC concentration.  I also added an additional optimization
 function that should be useful for adjusting the initial conditions of the sat zone to avoid a long spinup
 
 2024-05-29
 Add variables in the optimization view that allow the final best initial hydrology zone levels to be estimated and 
 output as a CIN which can be used to set the initial conditions for the DOC optimization.
 
-2024-05-02 
+2024-06-02 
 Added as single (factor andecomp multiplier) that will simultaneously adjust the andecomp of dryland and wetland decomp
 The idea is to use this in the early calibration step that adjusts the decomposition so that the C mass balance is correct.
 
-
+2025-06-06
+Made some small changes to INPUT optimization variables so that they can all be output at final time making them
+easier to incorporate into DOC model simulations.
