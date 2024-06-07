@@ -1,9 +1,13 @@
-5:Max runoff DOC dryland Soils
+1:Step3_DOC_v9_Dalkarlshyttan_Method4.vdfx
+1:Step2_DOC_v9_Dalkarlshyttan_Method4.vdfx
+1:Step1_DOC_v9_Dalkarlshyttan_Method4.vdfx
+4:Time
+5:Relative Diff Available C Sat Zone
 6:Continuous urban
 6:D1
 6:Dormant
 6:T1
 19:75,4
-24:0
-25:0
-26:0
+24:32143
+25:41275
+26:41275
