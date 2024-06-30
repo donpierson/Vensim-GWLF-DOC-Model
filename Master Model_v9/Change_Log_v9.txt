@@ -140,6 +140,30 @@ output as a CIN which can be used to set the initial conditions for the DOC opti
 Added as single (factor andecomp multiplier) that will simultaneously adjust the andecomp of dryland and wetland decomp
 The idea is to use this in the early calibration step that adjusts the decomposition so that the C mass balance is correct.
 
-2025-06-06
+2024-06-06
 Made some small changes to INPUT optimization variables so that they can all be output at final time making them
 easier to incorporate into DOC model simulations.
+
+2024-06-06 small fix to optimization variables that are used to set the initial concentrations in the sat and 
+deepsat zones
+
+2024-06-30
+Fixed two errors in the calculation of Optimization parameters used to calculate the mass balance of C of
+Carbon
+	Final Diff Meas Sim DOC Load - this compares the total sim decomposition to the total measured DOC export
+	The error was the the measured DOC export was based on simulated stream flow and measured concentration.  
+	It is fixed now be measured stream flow.  This could lead significant errors in the optimized decomposition
+	
+	Daily Load RMS -  This compares the simulated and measured daily DOC daily loads and was used in the 
+	second mass balance check.  Error was that I forgot to prevent the calculation from occurring during
+	during spin up when there were no daily measured loads.  I fixed this and also calculated a different 
+	but similar variable inal Diff Meas Sim DOC Load2 that is more compatible to the calibration factor
+	used in the first mass balance.
+	
+Also created two normalized objective functions to be used to optimize the Sat Zone storage and GW flow 
+in a policy opt
+	Relative Diff Stream DOC Conc
+	Realtive Min Sat Zone C
+	
+	
+ 
