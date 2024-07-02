@@ -165,5 +165,11 @@ in a policy opt
 	Relative Diff Stream DOC Conc
 	Realtive Min Sat Zone C
 	
+2024-07-01 
+Fixed calculation of Relative Diff Stream DOC Conc Reorganized the Opt view a bit.	Added two more optimization
+parameters that allow the initial levels of available C in the Wetland runoff and surface soil runoff 
+stores to be optimized, rather than starting from 0.  Removed some old equations regarding the earlier 
+formulation of surface DOC loss that were in the text view but not in the sketch view
+	
 	
  
