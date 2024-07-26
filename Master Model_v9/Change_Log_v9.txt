@@ -170,6 +170,8 @@ Fixed calculation of Relative Diff Stream DOC Conc Reorganized the Opt view a bi
 parameters that allow the initial levels of available C in the Wetland runoff and surface soil runoff 
 stores to be optimized, rather than starting from 0.  Removed some old equations regarding the earlier 
 formulation of surface DOC loss that were in the text view but not in the sketch view
-	
+
+2024-07-26
+Fixed mass balance 1 in optimization view to include the decomposition from wetlands
 	
  
